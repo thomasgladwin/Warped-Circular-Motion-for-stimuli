@@ -7,17 +7,27 @@ The function requires: library(ggplot2)
 The parameters are: save-name, base-angle [in proportion of PI], and number of vertices, and then two subsets of parameters: base-radius, and amplitude, frequency, and phase [in proportion of 2 PI] of radius oscillations.
   
 geomaker <- function(savename, angle_offset, nPoints, xrparams, yrparams) {
+
   angle = seq(0.5 * angle_offset * 2 * pi, (1 + 0.5 * angle_offset) * 2 * pi, length.out = nPoints + 1);
+
   r = xrparams[1] + xrparams[2] * cos(xrparams[3] * (angle + xrparams[4] * 2 * pi))
+  
   r2 = yrparams[1] + yrparams[2] * cos(yrparams[3] * (angle + yrparams[4] * 2 * pi))
+  
   x = r * cos(angle);
+  
   y = r2 * sin(angle);
+  
   D <- data.frame(x, y);
+  
   p0 <- ggplot(D, aes(x = x, y = y)) + geom_polygon(fill="white", colour="black", size=5)
+  
   p0 <- p0 + theme_void() + theme(legend.position="none") + theme(aspect.ratio=1)
-  p0
+  
   ggsave(savename, plot = p0)
+  
   print(p0)
+  
 }
 
 In particular the number of points (including the end-point which overlaps with the start-point), nPoints, and the two sets of params control what shape will come out. It's all based on warped circles, but that encompasses triangles and squares through very squiggly shapes.
@@ -47,5 +57,7 @@ Goat head: geomaker('test.png', 0, 200, c(1.5, 0.5, 5, -0.25), c(0.5, 1.5, 3, 0.
 Frog: geomaker('test.png', 0, 200, c(0.5, 0.5, 5, 0), c(1.5, 0.5, 3, 0))
 
 Shark attack: geomaker('test.png', 0, 200, c(1, 0, 2, 0), c(0.5, 0.35, 20, 0))
+
+Seemingly random squiggles: geomaker('test.png', 0, 400, c(5, 30, 4, 0.15), c(10.5, 10.35, 20, 0))
 
 And so on!
