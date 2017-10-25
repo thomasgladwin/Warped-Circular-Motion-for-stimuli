@@ -61,3 +61,7 @@ Shark attack: geomaker('test.png', 0, 200, c(1, 0, 2, 0), c(0.5, 0.35, 20, 0))
 Seemingly random squiggles: geomaker('test.png', 0, 400, c(5, 30, 4, 0.15), c(10.5, 10.35, 20, 0))
 
 And so on!
+
+[![DOI](https://zenodo.org/badge/108257987.svg)](https://zenodo.org/badge/latestdoi/108257987)
+
+Please cite as: Thomas Edward Gladwin. (2017, October 25). thomasgladwin/geomaker: v1. Zenodo. http://doi.org/10.5281/zenodo.1036613
