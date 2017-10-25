@@ -1,9 +1,9 @@
 # geomaker
-Stimuli, R, cues, geometric
 
 This is a simple but very generalizable function to parametrically generate abstract geometric stimuli. Useful for conditioning experiments for instance. The implementation is in R and also pots the figure using the ggplot2 library.
 
-The function requires: library(ggplot2)
+The function requires: library(ggplot2).
+
 The parameters are: save-name, base-angle [in proportion of PI], and number of vertices, and then two subsets of parameters: base-radius, and amplitude, frequency, and phase [in proportion of 2 PI] of radius oscillations.
   
 geomaker <- function(savename, angle_offset, nPoints, xrparams, yrparams) {
