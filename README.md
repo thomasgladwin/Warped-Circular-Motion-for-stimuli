@@ -30,7 +30,7 @@ geomaker <- function(savename, angle_offset, nPoints, xrparams, yrparams) {
   
 }
 
-In particular the number of points (including the end-point which overlaps with the start-point), nPoints, and the two sets of params control what shape will come out. It's all based on warped circles, but that encompasses triangles and squares through very squiggly shapes.
+It's all based on warped circles, but that encompasses triangles and squares through very squiggly shapes.
 
 Some examples are:
 
