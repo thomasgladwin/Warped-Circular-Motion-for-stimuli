@@ -1,6 +1,6 @@
 # geomaker
 
-This is a simple but very generalizable function to parametrically generate abstract geometric stimuli. Useful for conditioning experiments for instance. The implementation is in R and also pots the figure using the ggplot2 library.
+This is a simple but very generalizable function to parametrically generate abstract geometric stimuli. Useful for conditioning experiments for instance. The implementation is in R and also plots the figure using the ggplot2 library.
 
 The function requires: library(ggplot2).
 
