@@ -1,6 +1,6 @@
 # geomaker
 
-This is a simple but very generalizable function to parametrically generate abstract geometric stimuli. Useful for conditioning experiments for instance. The implementation is in R and also plots the figure using the ggplot2 library.
+This is a simple but very generalizable method I just decided to call the "Points on a Wonky Arc" (POWA) algorithm. It lets you parametrically generate abstract geometric stimuli based on tracing lines between points of a circle with an angle-varying radius. Useful for conditioning experiments for instance. The implementation is in R and also plots the figure using the ggplot2 library.
 
 The function requires: library(ggplot2).
 
@@ -30,7 +30,7 @@ geomaker <- function(savename, angle_offset, nPoints, xrparams, yrparams) {
   
 }
 
-It's all based on warped circles, but that encompasses triangles and squares through very squiggly shapes.
+So it's all based on warped circles, but that encompasses triangles and squares (just specify fewer points to draw lines between) through very squiggly shapes.
 
 Some examples are:
 
